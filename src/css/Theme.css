@@ -1,0 +1,41 @@
+:root {
+	--main-color: #ffffff;
+	--main-background: #2a2a2a;
+	--accent-color: #e0cb0b;
+	--border-size: 3px;
+	--header-line-height: 50px;
+}
+
+
+/* Generic helpers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.border.top {
+	border-bottom: var(--border-size) solid var(--accent-color);
+	border-radius: 0 0 var(--border-size) var(--border-size);
+}
+.border.bottom {
+	border-top: var(--border-size) solid var(--accent-color);
+	border-radius: var(--border-size) var(--border-size) 0 0;
+}
+
+
+/* Headers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+	font-weight: bold;
+	background-color: #222;
+}
+.header a,
+.header button {
+	transition: color 0.1s, background-color 0.1s;
+	color: var(--main-color);
+}
+.header a:hover,
+.header button:hover {
+	color: #000f;
+	background-color: var(--accent-color);
+}
+
+.templmao {
+	height:4000px;
+}
