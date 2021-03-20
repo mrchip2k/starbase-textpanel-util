@@ -35,7 +35,5 @@
 	color: #000f;
 	background-color: var(--accent-color);
 }
-
-.templmao {
-	height:4000px;
-}
+.sticky.top { margin-bottom: 20px; }
+.sticky.bottom { margin-top: 20px; }
