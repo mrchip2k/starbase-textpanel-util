@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Telegrama";
-	src: url("./fonts/telegrama_render.woff") format("woff");
+	src: url("../fonts/telegrama_render.woff") format("woff");
 }
 
 .font-textpanel {
