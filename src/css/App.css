@@ -1,8 +1,60 @@
+/* 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+	color: var(--main-color);
+	background-color: var(--main-background);
+}
+a:active, a:focus {
+	outline: 0;
+	-moz-outline-style: none;
+	outline-style: none;
+}
+
+
+/* Generic helpers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.grow { flex-grow: 1; }
+
+
+/* Telegrama font
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @font-face {
 	font-family: "Telegrama";
 	src: url("../fonts/telegrama_render.woff") format("woff");
 }
-
 .font-textpanel {
-	font-family: Telegrama;
+	font-family: "Telegrama";
+}
+
+
+/* Headers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.header img { height: var(--header-line-height) }
+.sticky.top {
+	position: sticky;
+	top: 0;
+}
+.sticky.bottom {
+	position: sticky;
+	bottom: 0;
+}
+.header a,
+.header button {
+	height: var(--header-line-height);
+	text-align: center;
+	/*Vertical text center*/
+	height: var(--header-line-height);
+	line-height: var(--header-line-height);
+}
+/*Vertical text center*/
+.header span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
 }
