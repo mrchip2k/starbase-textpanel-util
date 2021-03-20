@@ -9,11 +9,20 @@ a:active, a:focus {
 	-moz-outline-style: none;
 	outline-style: none;
 }
+code {
+	color: var(--main-color);
+	background-color: var(--main-background);
+	border-color: var(--accent-color);
+}
+.page-content h1{
+	text-align: center;
+}
 
 
 /* Generic helpers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .grow { flex-grow: 1; }
+.grow-smol { flex-grow: 0.5; }
 
 
 /* Telegrama font
@@ -57,4 +66,12 @@ a:active, a:focus {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: normal;
+}
+
+
+/* The Soon page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.soon {
+	text-align: center;
+	display: block;
 }

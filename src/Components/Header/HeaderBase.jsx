@@ -9,19 +9,18 @@ function HeaderBase(props) {
 				<img
 				src="/textpanel_logo128.png" 
 				alt="Logo"
-				className=""
 				/>
 			</Link>
 
 			<Link to="/" className="grow"> 
-			<span>Character List</span> 
+			<span>List</span> 
 			</Link>
 
 			<Link to="/preview" className="grow"> 
-			<span>Preview Mode</span> 
+			<span>Editor</span> 
 			</Link>
 
-			<Link to="/about" className="grow"> 
+			<Link to="/about" className="grow-smol"> 
 			<span>About</span> 
 			</Link>
 		</Container>

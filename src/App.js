@@ -9,6 +9,8 @@ import {
 
 import HeaderBase from './Components/Header/HeaderBase';
 import CharacterList from './Pages/CharacterList';
+import PreviewPage from './Pages/PreviewPage';
+import About from './Pages/About';
 
 function App() {
 	return (
@@ -17,8 +19,8 @@ function App() {
 				<HeaderBase/>
 				<Switch>
 					<Route exact path="/"> <CharacterList/> </Route>
-					<Route path="/preview"> Preview Mode Placeholder </Route>
-					<Route path="/about"> About Page Placeholder </Route>
+					<Route path="/preview"> <PreviewPage/> </Route>
+					<Route path="/about"> <About/> </Route>
 				</Switch>
 			</Router>
 		</div>

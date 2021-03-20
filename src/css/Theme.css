@@ -6,6 +6,9 @@
 	--header-line-height: 50px;
 }
 
+body {
+	font-family: "Telegrama";
+}
 
 /* Generic helpers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

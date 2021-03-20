@@ -5,7 +5,8 @@ import Container from "../Components/Misc/Container"
 function CharacterList(props) {
 	return (
 		<div>
-			<Container>
+			<Container addClass="page-content">
+				<h1>Character List</h1>
 				Character list Page Content
 			</Container>
 		</div>
