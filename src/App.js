@@ -12,13 +12,15 @@ import CharacterList from './Pages/CharacterList';
 import PreviewPage from './Pages/PreviewPage';
 import About from './Pages/About';
 
+import characterDatabase from "./characterDatabase";
+
 function App() {
 	return (
 		<div>
 			<Router>
 				<MainHeader/>
 				<Switch>
-					<Route exact path="/"> <CharacterList/> </Route>
+					<Route exact path="/"> <CharacterList database={characterDatabase}/> </Route>
 					<Route path="/preview"> <PreviewPage/> </Route>
 					<Route path="/about"> <About/> </Route>
 				</Switch>
