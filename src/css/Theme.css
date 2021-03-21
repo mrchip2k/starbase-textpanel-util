@@ -4,6 +4,7 @@
 	--accent-color: #e0cb0b;
 	--border-size: 3px;
 	--header-line-height: 50px;
+	--character-cell-size: 50px;
 }
 
 body {

@@ -71,3 +71,19 @@ code {
 	bottom: 0;
 	width:100%;
 }
+
+
+/* Character list
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.character-cell {
+	height: var(--character-cell-size);
+	width: var(--character-cell-size);
+	border: 2px solid var(--accent-color);
+	border-radius: 6px;
+	margin: 3px;
+	font-size: 3rem;
+	text-align: center;
+}
+.character-line *{
+	display: inline;
+}
