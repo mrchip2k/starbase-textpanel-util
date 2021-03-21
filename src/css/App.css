@@ -14,15 +14,14 @@ code {
 	background-color: var(--main-background);
 	border-color: var(--accent-color);
 }
-.page-content h1{
-	text-align: center;
-}
 
 
 /* Generic helpers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .grow { flex-grow: 1; }
-.grow-smol { flex-grow: 0.5; }
+.grow-half { flex-grow: 0.5; }
+.highlight { color: var(--accent-color); font-style: italic; }
+.centered { text-align: center; }
 
 
 /* Telegrama font
@@ -69,9 +68,3 @@ code {
 }
 
 
-/* The Soon page
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.soon {
-	text-align: center;
-	display: block;
-}

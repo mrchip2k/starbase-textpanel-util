@@ -20,7 +20,7 @@ function HeaderBase(props) {
 			<span>Editor</span> 
 			</Link>
 
-			<Link to="/about" className="grow-smol"> 
+			<Link to="/about" className="grow-half"> 
 			<span>About</span> 
 			</Link>
 		</Container>
