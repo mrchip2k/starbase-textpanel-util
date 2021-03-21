@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Misc/Container';
 
-function HeaderBase(props) {
+function MainHeader(props) {
 	return (
 		<Container addClass="header top sticky border">
 			<Link to="/">
@@ -27,4 +27,4 @@ function HeaderBase(props) {
 	);
 }
 
-export default HeaderBase;
+export default MainHeader;

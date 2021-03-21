@@ -7,7 +7,7 @@ import {
 	Route
 } from "react-router-dom";
 
-import HeaderBase from './Components/Header/HeaderBase';
+import MainHeader from './Components/Header/MainHeader';
 import CharacterList from './Pages/CharacterList';
 import PreviewPage from './Pages/PreviewPage';
 import About from './Pages/About';
@@ -16,7 +16,7 @@ function App() {
 	return (
 		<div>
 			<Router>
-				<HeaderBase/>
+				<MainHeader/>
 				<Switch>
 					<Route exact path="/"> <CharacterList/> </Route>
 					<Route path="/preview"> <PreviewPage/> </Route>
