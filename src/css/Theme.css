@@ -11,6 +11,24 @@ body {
 	font-family: "Telegrama";
 }
 
+.button {
+	color: var(--main-color);
+}
+.button.button-primary {
+	color: var(--main-background);
+	border-color: var(--accent-color);
+	background-color: var(--accent-color);
+}
+.button:hover {
+	color: #aaa;
+	border-color: #aaa;
+}
+.button.button-primary:hover {
+	color: black;
+	border-color: #ece071;
+	background-color: #ece071;
+}
+
 /* Generic helpers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .border.top {
