@@ -53,8 +53,8 @@ code {
 	bottom: 0;
 }
 .header a,
-.header button {
-	height: var(--header-line-height);
+.header button,
+.header div {
 	text-align: center;
 	/*Vertical text center*/
 	height: var(--header-line-height);
@@ -66,5 +66,8 @@ code {
 	vertical-align: middle;
 	line-height: normal;
 }
-
-
+.bottom-header-container {
+	position:fixed;
+	bottom: 0;
+	width:100%;
+}
