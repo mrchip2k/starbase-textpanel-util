@@ -42,3 +42,13 @@ body {
 .sticky.top { margin-bottom: 20px; }
 .sticky.bottom { margin-top: 20px; }
 .header.bottom { font-weight: normal; }
+
+
+/* Character list
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.character-cell {
+	margin: 2px;
+}
+.character-line {
+	margin: 15px 0;
+}

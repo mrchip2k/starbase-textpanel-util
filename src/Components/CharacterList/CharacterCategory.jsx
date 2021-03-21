@@ -5,7 +5,7 @@ function CharacterCategory(props) {
 	const line = props.category.lines.map((line) => <CharacterLine line={line}/> );
 
 	return (
-		<div>
+		<div className="noselect">
 			<p className="category-name">{props.category.name}</p>
 			<div>{line}</div>
 		</div>
