@@ -11,3 +11,5 @@ Starbase uses the Telegrama font, with many special characters removed from it.
 This website uses it to show what the special characters will look like in game.
 
 The Telegrama font file is included in this repository, since I found no other way to get it working online. If you are the font's owner and have an issue with this, please contact me: mrchip2k@gmail.com
+
+In any case, this repository's license does not extend to the Telegrama font.
