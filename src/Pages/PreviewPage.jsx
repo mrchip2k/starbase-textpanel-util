@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../Components/Misc/Container';
 
 function PreviewPage(props) {
@@ -18,6 +19,8 @@ function PreviewPage(props) {
 			<p>
 				Rightclick to add characters to a textbox, then copy all of them at once. <span className="highlight">Includes keyboard shortcuts!</span> This will be the default mode for mobile users.
 			</p>
+
+			<p className="highlight">Any suggestions? <Link to="/about">Contact me!</Link></p>
 			
 		</Container>
 	);
