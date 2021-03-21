@@ -6,11 +6,6 @@
 	--header-line-height: 50px;
 	--character-cell-size: 50px;
 }
-
-body {
-	font-family: "Telegrama";
-}
-
 .button {
 	color: var(--main-color);
 }
