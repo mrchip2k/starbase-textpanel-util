@@ -66,7 +66,20 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .character-cell {
 	margin: 2px;
+	border: 1px solid var(--accent-color);
+	border-radius: 6px;
+	font-size: 3rem;
 }
 .character-line {
 	margin: 15px 0;
+}
+.category-name {
+	color: var(--main-color);
+	opacity: 50%;
+	font-size: 3rem;
+	text-align: right;
+	z-index: -1;
+
+	margin-bottom: -10px;
+	border-bottom: 2px solid var(--main-color);
 }
