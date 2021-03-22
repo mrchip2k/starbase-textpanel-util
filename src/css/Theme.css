@@ -1,13 +1,27 @@
 :root {
 	--main-color: #ffffff;
-	--main-background: #2a2a2a;
+	--main-background: #141414;
 	--accent-color: #e0cb0b;
 	--border-size: 3px;
 	--header-line-height: 50px;
+	--character-cell-size: 50px;
 }
-
-body {
-	font-family: "Telegrama";
+.button {
+	color: var(--main-color);
+}
+.button.button-primary {
+	color: var(--main-background);
+	border-color: var(--accent-color);
+	background-color: var(--accent-color);
+}
+.button:hover {
+	color: #aaa;
+	border-color: #aaa;
+}
+.button.button-primary:hover {
+	color: black;
+	border-color: #ece071;
+	background-color: #ece071;
 }
 
 /* Generic helpers
@@ -41,3 +55,30 @@ body {
 .sticky.top { margin-bottom: 20px; }
 .sticky.bottom { margin-top: 20px; }
 .header.bottom { font-weight: normal; }
+.header.bottom img {
+	height: calc(  var(--header-line-height)  *  0.7  );
+	padding: calc(  var(--header-line-height)  *  0.3 / 2  );
+}
+
+
+/* Character list
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.character-cell {
+	margin: 2px;
+	border: 1px solid var(--accent-color);
+	border-radius: 6px;
+	font-size: 3rem;
+}
+.character-line {
+	margin: 15px 0;
+}
+.category-name {
+	color: var(--main-color);
+	opacity: 50%;
+	font-size: 3rem;
+	text-align: right;
+	z-index: -1;
+
+	margin-bottom: -10px;
+	border-bottom: 2px solid var(--main-color);
+}

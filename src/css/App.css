@@ -22,6 +22,14 @@ code {
 .grow-half { flex-grow: 0.5; }
 .highlight { color: var(--accent-color); font-style: italic; }
 .centered { text-align: center; }
+.header, .noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+	     -moz-user-select: none; /* Old versions of Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
 
 
 /* Telegrama font
@@ -30,7 +38,7 @@ code {
 	font-family: "Telegrama";
 	src: url("../fonts/telegrama_render.woff") format("woff");
 }
-.font-textpanel {
+.telegrama {
 	font-family: "Telegrama";
 }
 
@@ -70,4 +78,24 @@ code {
 	position:fixed;
 	bottom: 0;
 	width:100%;
+}
+.header-spacer {
+	height: var(--header-line-height)
+}
+
+
+/* Character list
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.character-cell {
+	height: var(--character-cell-size);
+	width: var(--character-cell-size);
+	text-align: center;
+}
+.character-line {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.character-line *{
+	display: inline;
 }
