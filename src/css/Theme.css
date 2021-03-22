@@ -55,6 +55,10 @@
 .sticky.top { margin-bottom: 20px; }
 .sticky.bottom { margin-top: 20px; }
 .header.bottom { font-weight: normal; }
+.header.bottom img {
+	height: calc(  var(--header-line-height)  *  0.7  );
+	padding: calc(  var(--header-line-height)  *  0.3 / 2  );
+}
 
 
 /* Character list
