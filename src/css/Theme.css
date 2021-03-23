@@ -63,11 +63,25 @@
 
 /* Character list
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.character-cell {
+.character-cell,
+.character-cell:focus {
+	color:var(--main-color);
 	margin: 2px;
 	border: 1px solid var(--accent-color);
 	border-radius: 6px;
 	font-size: 3rem;
+	transition: border-width 0.1s, background-color 0.1s, color 0.1s;
+}
+.character-cell:hover {
+	/*This selector overrides the look coming from buttons.*/
+	border-color: var(--accent-color);
+	border-width: 3px;
+	color: var(--main-color);
+	background-color: #000c;
+}
+.character-cell:active {
+	background-color: var(--accent-color);
+	color:var(--main-background);
 }
 .character-line {
 	margin: 15px 0;
@@ -81,4 +95,21 @@
 
 	margin-bottom: -10px;
 	border-bottom: 2px solid var(--main-color);
+}
+
+
+/* "Copied!" popup text when you click on a button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.copied-popup-container div {
+	transition: opacity 1s, bottom 1s;
+
+	background-color: var(--accent-color);
+	padding: 10px;
+	color: black;
+	font-size: 2rem;
+	font-weight: bold;
+	border-radius: 50px;
+	
+	/*This style determines how the element looks at the end of the "hiding" transition.*/
+	bottom: 5em;
 }

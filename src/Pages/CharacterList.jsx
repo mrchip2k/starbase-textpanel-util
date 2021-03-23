@@ -1,5 +1,6 @@
 import React from 'react';
 import CharacterCategory from '../Components/CharacterList/CharacterCategory';
+import CopiedPopupText from '../Components/CharacterList/CopiedPopupText';
 import BottomDynamicHeader from '../Components/Header/BottomDynamicHeader';
 
 import Container from "../Components/Misc/Container"
@@ -17,7 +18,8 @@ function CharacterList(props) {
 				<p>Tip: Keep in mind a lot of characters look "thin" and are not as readable on a tiny text panel placed far away from the player's point of view.</p>
 				<div>{list}</div>
 			</Container>
-
+			
+			<CopiedPopupText/>
 			<BottomDynamicHeader/>
 		</div>
 	);
