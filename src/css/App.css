@@ -124,6 +124,7 @@ code {
 	position: relative;
 	left:-50%;
 	opacity: 0;
+	white-space: nowrap;
 }
 .copied-popup-container.copied-popup-visible div {
 	transition: opacity 0s, bottom 0s ;

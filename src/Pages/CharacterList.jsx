@@ -11,6 +11,8 @@ class CharacterList extends React.Component {
 		super(props);
 		this.state = {
 			copiedPopupVisible : false,
+			copiedPopupX : "100px",
+			copiedPopupY : "100px",
 		};
 		
 		this.showCopiedPopup = this.showCopiedPopup.bind(this);
@@ -22,11 +24,21 @@ class CharacterList extends React.Component {
 		);
 	}
 
-	showCopiedPopup() {
-		console.log("lmao")
-		console.log(this);
+	showCopiedPopup(boundingClientRect) {
+
+		//midpoint between .left and .right
+		const resultX = boundingClientRect.left - 
+		(boundingClientRect.left-boundingClientRect.right)/2
+
+		//.top gives height to start from
+		const resultY = boundingClientRect.top-20
+		//For later: window.innerHeight
 		
-		this.setState({ copiedPopupVisible: true });
+		this.setState({ 
+			copiedPopupVisible: true,
+			copiedPopupX : resultX, 
+			copiedPopupY : resultY
+		});
 
 		setTimeout(() => {
 			this.setState({ copiedPopupVisible: false });
@@ -46,7 +58,11 @@ class CharacterList extends React.Component {
 					<div>{this.list}</div>
 				</Container>
 				
-				<CopiedPopupText isVisible={this.state.copiedPopupVisible}/>
+				<CopiedPopupText 
+				isVisible={this.state.copiedPopupVisible}
+				left={this.state.copiedPopupX}
+				top={this.state.copiedPopupY}
+				/>
 				<BottomDynamicHeader/>
 			</div>
 		);
