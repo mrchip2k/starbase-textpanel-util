@@ -2,10 +2,12 @@ import React from 'react';
 
 import Container from '../Components/Misc/Container';
 import NewTabLink from "../Components/Misc/NewTabLink";
+import VersionBadge from '../Components/Misc/VersionBadge';
 
 function About(props) {
 	return (
 		<Container addClass="page-content">
+			<VersionBadge/>
 			<h1 className="centered">About</h1>
 			<p>This is a utility website for the game Starbase. It lets you find and copy special characters, previewing them with the same font used in the game.</p>
 			<p>The main purpose of this is to create nicer text panel UI.</p>
@@ -24,7 +26,6 @@ function About(props) {
 
 			<h4>Github repository</h4>
 			<p>The source code is available <NewTabLink href="https://github.com/mrchip2k/starbase-textpanel-util">here</NewTabLink>.</p>
-			<p>#TODO: license</p>
 		</Container>
 	);
 }

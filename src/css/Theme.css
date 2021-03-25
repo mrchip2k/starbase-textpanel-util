@@ -101,7 +101,7 @@
 /* "Copied!" popup text when you click on a button
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .copied-popup-container div {
-	transition: opacity 1s, bottom 1s;
+	transition: opacity .3s, bottom .3s;
 
 	background-color: var(--accent-color);
 	padding: 10px;

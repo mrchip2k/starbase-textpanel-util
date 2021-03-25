@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Components/Misc/Container';
+import VersionBadge from '../Components/Misc/VersionBadge';
 
 function PreviewPage(props) {
 	return (
 		<Container addClass="page-content">
+			<VersionBadge/>
 			<h1 className="centered">Preview Editor</h1>
 
 			<img

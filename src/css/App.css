@@ -135,3 +135,12 @@ code {
 	margin: 0 10px;
 	padding: 0;
 }
+
+
+/* Version Badge
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#version-badge {
+	text-align: right;
+	color: var(--accent-color);
+	font-size: 0.9rem;
+}

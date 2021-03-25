@@ -4,6 +4,7 @@ import CopiedPopupText from '../Components/CharacterList/CopiedPopupText';
 import BottomDynamicHeader from '../Components/Header/BottomDynamicHeader';
 
 import Container from "../Components/Misc/Container"
+import VersionBadge from '../Components/Misc/VersionBadge';
 
 class CharacterList extends React.Component {
 	
@@ -31,7 +32,7 @@ class CharacterList extends React.Component {
 		(boundingClientRect.left-boundingClientRect.right)/2
 
 		//.top gives height to start from
-		const resultY = boundingClientRect.top-20
+		const resultY = boundingClientRect.top-13
 		//For later: window.innerHeight
 		
 		this.setState({ 
@@ -42,7 +43,7 @@ class CharacterList extends React.Component {
 
 		setTimeout(() => {
 			this.setState({ copiedPopupVisible: false });
-		}, 100); //how long the popup is kept stable on screen, before starting the fadeaway animation. Too short and it won't even show up. (CSS class is added and removed again before a render happens)
+		}, 300); //how long the popup is kept stable on screen, before starting the fadeaway animation. Too short and it won't even show up. (CSS class is added and removed again before a render happens)
 	};
 
 	
@@ -51,6 +52,7 @@ class CharacterList extends React.Component {
 		return (
 			<div>
 				<Container addClass="page-content">
+					<VersionBadge/>
 					<h1 className="centered">Character List</h1>
 					<p>Find and copy special characters for Starbase Text Panels!</p>
 					<p className="highlight">The font you're seeing here is the same used by the game!</p>
