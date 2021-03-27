@@ -14,7 +14,8 @@ class CharacterCell extends React.Component {
 			ref={this.selfRef}
 			onClick={() => {
 				// trigger popup and send client rect object. the popup does the math.
-				this.props.showPopupFunc(this.selfRef.current.getBoundingClientRect());
+				// also send the character to copy.
+				this.props.copyFunc(this.selfRef.current.getBoundingClientRect() , this.props.char);
 			} }>
 
 				{this.props.char}

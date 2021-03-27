@@ -4,6 +4,7 @@ import CopiedPopupText from '../Components/CharacterList/CopiedPopupText';
 import BottomDynamicHeader from '../Components/Header/BottomDynamicHeader';
 
 import Container from "../Components/Misc/Container"
+import InvisibleCopyTextbox from '../Components/Misc/InvisibleCopyTextbox';
 import VersionBadge from '../Components/Misc/VersionBadge';
 
 class CharacterList extends React.Component {
@@ -14,18 +15,28 @@ class CharacterList extends React.Component {
 			copiedPopupVisible : false,
 			copiedPopupX : "100px",
 			copiedPopupY : "100px",
+			character : "ඞ",
 		};
 		
-		this.showCopiedPopup = this.showCopiedPopup.bind(this);
+		this.copyFunc = this.copyFunc.bind(this);
+
+		this.copyTextboxRef = React.createRef();
 
 		// Generate the character list.
-		// Passes down the showCopiedPopup function, to let the buttons run it.
+		// Passes down the copyFunc function, to let the buttons run it.
 		this.list = this.props.database.map((category) => 
-			<CharacterCategory category={category} showPopupFunc={this.showCopiedPopup}/>
+			<CharacterCategory category={category} copyFunc={this.copyFunc}/>
 		);
 	}
 
-	showCopiedPopup(boundingClientRect) {
+
+
+	copyFunc(boundingClientRect, character) {
+		this.triggerPopup(boundingClientRect);
+		this.triggerCopy(character);
+	};
+
+	triggerPopup (boundingClientRect, character) {
 
 		//midpoint between .left and .right
 		const resultX = boundingClientRect.left - 
@@ -38,14 +49,24 @@ class CharacterList extends React.Component {
 		this.setState({ 
 			copiedPopupVisible: true,
 			copiedPopupX : resultX, 
-			copiedPopupY : resultY
+			copiedPopupY : resultY,
 		});
 
 		setTimeout(() => {
 			this.setState({ copiedPopupVisible: false });
 		}, 300); //how long the popup is kept stable on screen, before starting the fadeaway animation. Too short and it won't even show up. (CSS class is added and removed again before a render happens)
-	};
+	}
 
+	triggerCopy(character) {
+		this.setState ({
+			character : character
+		})
+		
+		setTimeout(() => {
+			this.copyTextboxRef.current.copyNow()
+			console.log("Copying!")
+		}, 100);
+	}
 	
 
 	render() {
@@ -59,12 +80,19 @@ class CharacterList extends React.Component {
 					<p>Tip: Keep in mind a lot of characters look "thin" and are not as readable on a tiny text panel placed far away from the player's point of view.</p>
 					<div>{this.list}</div>
 				</Container>
+
 				
+				<InvisibleCopyTextbox 
+				copyContent={this.state.character}
+				ref={this.copyTextboxRef}
+				/>
+
 				<CopiedPopupText 
 				isVisible={this.state.copiedPopupVisible}
 				left={this.state.copiedPopupX}
 				top={this.state.copiedPopupY}
 				/>
+
 				<BottomDynamicHeader/>
 			</div>
 		);
