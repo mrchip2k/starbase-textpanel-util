@@ -17,10 +17,18 @@ class InvisibleCopyTextbox extends React.Component {
 	render() {
 		return (
 			<input 
-			readOnly
-			type="text" 
-			ref={this.inputElementRef} 
-			value={this.props.copyContent}
+				readOnly
+				type="text" 
+
+				ref={this.inputElementRef} 
+				value={this.props.copyContent}
+
+				className="noselect"
+				style={{
+					opacity:0,
+					position: "fixed",
+					top: "200%"
+				}}
 			/>
 		);
 	};
