@@ -4,8 +4,12 @@ import CharacterLine from './CharacterLine';
 function CharacterCategory(props) {
 	// Generate the lines.
 	// Passes down the copyFunc function, to let the buttons run it.
-	let lines = props.category.lines.map((line) => 
-		<CharacterLine line={line} copyFunc={props.copyFunc}/> 
+	let lines = props.category.lines.map((line, i) => 
+		<CharacterLine 
+			key={i}
+			line={line} 
+			copyFunc={props.copyFunc}
+		/> 
 	);
 
 	return (
