@@ -5,9 +5,9 @@ function CharacterLine(props) {
 	const lineAsArray = [...props.line];
 
 	// Generate the buttons.
-	// Passes down the showCopiedPopup (showPopupFunc) function, to let the buttons run it.
+	// Passes down the copyFunc function, to let the buttons run it.
 	let buttons = lineAsArray.map((character) => 
-		<CharacterCell char={character} showPopupFunc={props.showPopupFunc}/>
+		<CharacterCell char={character} copyFunc={props.copyFunc}/>
 	);
 	return (
 		<div className="character-line">

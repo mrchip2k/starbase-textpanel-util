@@ -3,9 +3,9 @@ import CharacterLine from './CharacterLine';
 
 function CharacterCategory(props) {
 	// Generate the lines.
-	// Passes down the showCopiedPopup (showPopupFunc) function, to let the buttons run it.
+	// Passes down the copyFunc function, to let the buttons run it.
 	let lines = props.category.lines.map((line) => 
-		<CharacterLine line={line} showPopupFunc={props.showPopupFunc}/> 
+		<CharacterLine line={line} copyFunc={props.copyFunc}/> 
 	);
 
 	return (
