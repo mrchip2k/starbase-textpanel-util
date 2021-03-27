@@ -93,6 +93,7 @@ class CharacterList extends React.Component {
 									maxWidth:128,
 									textAlign:"center"
 								}}
+								alt="Example"
 							/>
 						</div>
 					</div>
