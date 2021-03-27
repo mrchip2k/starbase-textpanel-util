@@ -24,8 +24,12 @@ class CharacterList extends React.Component {
 
 		// Generate the character list.
 		// Passes down the copyFunc function, to let the buttons run it.
-		this.list = this.props.database.map((category) => 
-			<CharacterCategory category={category} copyFunc={this.copyFunc}/>
+		this.list = this.props.database.map((category, i) => 
+			<CharacterCategory 
+				key={i}
+				category={category} 
+				copyFunc={this.copyFunc}
+			/>
 		);
 	}
 

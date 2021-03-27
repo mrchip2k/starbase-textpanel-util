@@ -6,8 +6,12 @@ function CharacterLine(props) {
 
 	// Generate the buttons.
 	// Passes down the copyFunc function, to let the buttons run it.
-	let buttons = lineAsArray.map((character) => 
-		<CharacterCell char={character} copyFunc={props.copyFunc}/>
+	let buttons = lineAsArray.map((character, i) => 
+		<CharacterCell 
+			key={i}
+			char={character} 
+			copyFunc={props.copyFunc}
+		/>
 	);
 	return (
 		<div className="character-line">
