@@ -1,0 +1,20 @@
+{
+  "short_name": "yolol.lol",
+  "name": "Tools for Starbase",
+  "icons": [
+    {
+      "src": "textpanel_favicon32.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "textpanel_logo128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#e0cb0b",
+  "background_color": "#141414"
+}

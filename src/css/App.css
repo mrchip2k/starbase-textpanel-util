@@ -1,0 +1,146 @@
+/* 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+	color: var(--main-color);
+	background-color: var(--main-background);
+}
+a:active, a:focus {
+	outline: 0;
+	-moz-outline-style: none;
+	outline-style: none;
+}
+code {
+	color: var(--main-color);
+	background-color: var(--main-background);
+	border-color: var(--accent-color);
+}
+
+
+/* Generic helpers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.grow { flex-grow: 1; }
+.grow-half { flex-grow: 0.5; }
+.highlight { color: var(--accent-color); font-style: italic; }
+.centered { text-align: center; }
+.header, .noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+	     -moz-user-select: none; /* Old versions of Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+/* Telegrama font
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+	font-family: "Telegrama";
+	src: url("../fonts/telegrama_render.woff") format("woff");
+}
+.telegrama {
+	font-family: "Telegrama";
+}
+
+
+/* Headers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.header img { height: var(--header-line-height) }
+.sticky.top {
+	position: sticky;
+	top: 0;
+}
+.sticky.bottom {
+	position: sticky;
+	bottom: 0;
+}
+.header a,
+.header button,
+.header div {
+	text-align: center;
+	/*Vertical text center*/
+	height: var(--header-line-height);
+	line-height: var(--header-line-height);
+}
+/*Vertical text center*/
+.header span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+.bottom-header-container {
+	position:fixed;
+	bottom: 0;
+	width:100%;
+}
+.header-spacer {
+	height: var(--header-line-height)
+}
+
+
+/* Character list
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.character-cell {
+	height: var(--character-cell-size);
+	width: var(--character-cell-size);
+	text-align: center;
+}
+
+.character-cell{
+	/*This selector overrides the style coming from buttons. 
+	If all buttons get new properties, they may need to be added here.*/
+	color: var(--main-color);
+	padding: 0;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: normal;
+}
+.character-line {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.character-line *{
+	display: inline;
+}
+
+
+/* "Copied!" popup text when you click on a button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.copied-popup-container {
+	position: fixed;
+	top:50%;
+	left: 50%;
+	pointer-events: none; /*Lets you click through the whole object*/
+	z-index: 11; /*Higher than the header*/
+}
+.copied-popup-container div {
+	position: relative;
+	left:-50%;
+	opacity: 0;
+	white-space: nowrap;
+}
+.copied-popup-container.copied-popup-visible div {
+	transition: opacity 0s, bottom 0s ;
+	opacity: 1;
+	bottom: 2em;
+}
+.copied-popup-container div * {
+	margin: 0 10px;
+	padding: 0;
+}
+
+
+/* Version Badge
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#version-badge {
+	text-align: right;
+	color: var(--accent-color);
+	font-size: 0.9rem;
+}

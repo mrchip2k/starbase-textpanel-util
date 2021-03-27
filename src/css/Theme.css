@@ -1,0 +1,115 @@
+:root {
+	--main-color: #ffffff;
+	--main-background: #141414;
+	--accent-color: #e0cb0b;
+	--border-size: 3px;
+	--header-line-height: 50px;
+	--character-cell-size: 50px;
+}
+.button {
+	color: var(--main-color);
+}
+.button.button-primary {
+	color: var(--main-background);
+	border-color: var(--accent-color);
+	background-color: var(--accent-color);
+}
+.button:hover {
+	color: #aaa;
+	border-color: #aaa;
+}
+.button.button-primary:hover {
+	color: black;
+	border-color: #ece071;
+	background-color: #ece071;
+}
+
+/* Generic helpers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.border.top {
+	border-bottom: var(--border-size) solid var(--accent-color);
+	border-radius: 0 0 var(--border-size) var(--border-size);
+}
+.border.bottom {
+	border-top: var(--border-size) solid var(--accent-color);
+	border-radius: var(--border-size) var(--border-size) 0 0;
+}
+
+
+/* Headers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+	font-weight: bold;
+	background-color: #222;
+}
+.header a,
+.header button {
+	transition: color 0.1s, background-color 0.1s;
+	color: var(--main-color);
+}
+.header a:hover,
+.header button:hover {
+	color: #000f;
+	background-color: var(--accent-color);
+}
+.sticky.top { margin-bottom: 20px; }
+.sticky.bottom { margin-top: 20px; }
+.header.bottom { font-weight: normal; }
+.header.bottom img {
+	height: calc(  var(--header-line-height)  *  0.7  );
+	padding: calc(  var(--header-line-height)  *  0.3 / 2  );
+}
+
+
+/* Character list
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.character-cell,
+.character-cell:focus {
+	color:var(--main-color);
+	margin: 2px;
+	border: 1px solid var(--accent-color);
+	border-radius: 6px;
+	font-size: 3rem;
+	transition: border-width 0.1s, background-color 0.1s, color 0.1s;
+}
+.character-cell:hover {
+	/*This selector overrides the look coming from buttons.*/
+	border-color: var(--accent-color);
+	border-width: 3px;
+	color: var(--main-color);
+	background-color: #000c;
+}
+.character-cell:active {
+	background-color: var(--accent-color);
+	color:var(--main-background);
+}
+.character-line {
+	margin: 15px 0;
+}
+.category-name {
+	color: var(--main-color);
+	opacity: 50%;
+	font-size: 3rem;
+	text-align: right;
+	z-index: -1;
+
+	margin-bottom: -10px;
+	border-bottom: 2px solid var(--main-color);
+}
+
+
+/* "Copied!" popup text when you click on a button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.copied-popup-container div {
+	transition: opacity .3s, bottom .3s;
+
+	background-color: var(--accent-color);
+	padding: 10px;
+	color: black;
+	font-size: 2rem;
+	font-weight: bold;
+	border-radius: 50px;
+	
+	/*This style determines how the element looks at the end of the "hiding" transition.*/
+	bottom: 5em;
+}
