@@ -77,9 +77,26 @@ class CharacterList extends React.Component {
 				<Container addClass="page-content">
 					<VersionBadge/>
 					<h1 className="centered">Character List</h1>
-					<p>Find and copy special characters for Starbase Text Panels!</p>
-					<p className="highlight">The font you're seeing here is the same used by the game!</p>
-					<p>Tip: Keep in mind a lot of characters look "thin" and are not as readable on a tiny text panel placed far away from the player's point of view.</p>
+
+					<div className="row">
+						<div className="ten columns">
+							<p>Find and copy special characters for Starbase Text Panels!</p>
+							<p className="highlight">The font you're seeing here is the same used by the game!</p>
+							<p>Tip: Keep in mind a lot of characters look "thin" and are not as readable on a tiny text panel placed far away from the player's point of view.</p>
+						</div>
+						
+						<div className="two columns">
+							<img 
+								src="/assets/example212px.jpg"
+								style={{
+									width:"100%",
+									maxWidth:128,
+									textAlign:"center"
+								}}
+							/>
+						</div>
+					</div>
+					
 					<div>{this.list}</div>
 				</Container>
 
