@@ -3,6 +3,8 @@ A utility website for the game Starbase, to find and copy visually interesting c
 
 I made this website mostly as an exercise in web development, while also making a useful tool for the community.
 
+This website uses React, and the [Skeleton CSS](http://getskeleton.com) framework (most styling is still custom).
+
 ## About Telegrama, the font
 The font is originally from [here](http://yoworks.com/telegrama/index.html). 
 
