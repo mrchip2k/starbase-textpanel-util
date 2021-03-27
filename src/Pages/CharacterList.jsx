@@ -54,7 +54,9 @@ class CharacterList extends React.Component {
 
 		setTimeout(() => {
 			this.setState({ copiedPopupVisible: false });
-		}, 300); //how long the popup is kept stable on screen, before starting the fadeaway animation. Too short and it won't even show up. (CSS class is added and removed again before a render happens)
+		}, 300); 
+		// How long the popup is kept stable on screen, before starting the fadeaway animation. 
+		//Too short and it won't even show up. (CSS class is added and removed again before a render happens)
 	}
 
 	triggerCopy(character) {
@@ -64,8 +66,8 @@ class CharacterList extends React.Component {
 		
 		setTimeout(() => {
 			this.copyTextboxRef.current.copyNow()
-			console.log("Copying!")
 		}, 100);
+		// Delay is necessary because otherwise it doesnt have time to change the textbox's content, and copies the old content.
 	}
 	
 
