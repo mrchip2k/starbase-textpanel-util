@@ -12,7 +12,7 @@ function InvalidUrl(props) {
 			<VersionBadge/>
 			<h1>URL not found.</h1>
 			<p>The URL: <code>{location}</code> could not be found.</p>
-			<Link to="/" class="button button-primary" >Back to homepage</Link>
+			<Link to="/" className="button button-primary" >Back to homepage</Link>
 		</Container>
 	);
 }
