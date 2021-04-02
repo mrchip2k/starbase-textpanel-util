@@ -1,8 +1,9 @@
 import React from 'react';
+
 import CharacterCategory from '../Components/CharacterList/CharacterCategory';
 import CopiedPopupText from '../Components/CharacterList/CopiedPopupText';
+import Hints from '../Components/CharacterList/Hints';
 import BottomDynamicHeader from '../Components/Header/BottomDynamicHeader';
-
 import Container from "../Components/Misc/Container"
 import InvisibleCopyTextbox from '../Components/Misc/InvisibleCopyTextbox';
 import VersionBadge from '../Components/Misc/VersionBadge';
@@ -82,26 +83,8 @@ class CharacterList extends React.Component {
 					<VersionBadge/>
 					<h1 className="centered">Character List</h1>
 
-					<div className="row">
-						<div className="ten columns">
-							<p>Find and copy special characters for Starbase Text Panels!</p>
-							<p className="highlight">The font you're seeing here is the same used by the game!</p>
-							<p>Tip: Keep in mind a lot of characters look "thin" and are not as readable on a tiny text panel placed far away from the player's point of view.</p>
-						</div>
-						
-						<div className="two columns">
-							<img 
-								src="/assets/example212px.jpg"
-								style={{
-									width:"100%",
-									maxWidth:128,
-									textAlign:"center"
-								}}
-								alt="Example"
-							/>
-						</div>
-					</div>
-					
+					<Hints/>
+
 					<div>{this.list}</div>
 				</Container>
 
