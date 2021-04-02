@@ -30,7 +30,7 @@ class Hints extends React.Component {
 
 				<div 
 					className="hints-button telegrama">
-						Next Hint »
+						Next Hint
 				</div>
 
 			</div>

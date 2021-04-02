@@ -142,26 +142,35 @@ button.button-primary:hover,
 }
 
 
-/* Enable Hover on PC */
 @media (min-width: 1000px) { 
+	/* Enable Hover on PC */
 	.hints-container:hover p{ 
 		background-position: center right 9%;
 		background-color: #272727;
 	}
 	.hints-container:hover .hints-button{ 
 		animation: woosh 1s linear 0s infinite forwards; 
-		background-color: #ece071;
+	}
+	.hints-container:hover .hints-button::after {
+		left: 100px;
 	}
 }
 .hints-container:active *{
 	color: white !important;
 	background-color: black !important;
 }
-.hints-container:active p{ background-position: center right -100%; }
+.hints-container:active p{
+	background-position: center right -100%; 
+}
 .hints-container:active .hints-button{ 
 	animation: none;
 	background: none; /*or else the gradient overrides the black color*/
 }
+.hints-container:active .hints-button::after{
+	left: 0;
+	content: "";
+}
+@media (min-width: 1000px) { .hints-container:active .hints-button::after{ content: " «"; } }
 
 .hints-button {
 	cursor: pointer;
@@ -179,4 +188,10 @@ button.button-primary:hover,
 @keyframes woosh{
   from{background-position:200%;}
   to  {background-position:0%;}
+}
+.hints-button::after {
+	content: " »";
+	position: relative;
+	transition: left 1s;
+	left: 0;
 }
