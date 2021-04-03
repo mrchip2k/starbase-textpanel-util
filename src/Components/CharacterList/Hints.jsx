@@ -31,6 +31,7 @@ class Hints extends React.Component {
 				<div 
 					className="hints-button telegrama">
 						Next Hint
+						<span> { this.state.hintIndex+1 +"/"+ this.hintsLength } </span>
 				</div>
 
 			</div>

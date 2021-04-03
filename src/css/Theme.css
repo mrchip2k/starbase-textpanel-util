@@ -155,16 +155,16 @@ button.button-primary:hover,
 		left: 100px;
 	}
 }
-.hints-container:active *{
-	color: white !important;
-	background-color: black !important;
-}
 .hints-container:active p{
+	color: white ;
+	background-color: black ;
 	background-position: center right -100%; 
 }
 .hints-container:active .hints-button{ 
-	animation: none;
+	color: white ;
 	background: none; /*or else the gradient overrides the black color*/
+	background-color: black ;
+	animation: none;
 }
 .hints-container:active .hints-button::after{
 	left: 0;
@@ -194,4 +194,9 @@ button.button-primary:hover,
 	position: relative;
 	transition: left 1s;
 	left: 0;
+}
+.hints-button span {
+	position: absolute;
+	right: 10px;
+	background: none;
 }
