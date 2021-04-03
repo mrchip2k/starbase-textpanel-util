@@ -141,6 +141,19 @@ button.button-primary:hover,
 	background-size: contain;
 }
 
+/*Duplicate selector, split for correct priorities*/
+.hints-container:active .hints-button::after{ content: ""; }
+.hints-button::after {
+	content: " »";
+	position: relative;
+	transition: left 1s;
+	left: 0;
+}
+.hints-button span {
+	position: absolute;
+	right: 10px;
+	background: none;
+}
 
 @media (min-width: 1000px) { 
 	/* Enable Hover on PC */
@@ -154,7 +167,11 @@ button.button-primary:hover,
 	.hints-container:hover .hints-button::after {
 		left: 100px;
 	}
+	/* When leaving hover, reverse the arrow */
+	.hints-container:active .hints-button::after{ content: " «"; }
 }
+/*Duplicate selector, split for correct priorities*/
+.hints-container:active .hints-button::after{ left: 0; }
 .hints-container:active p{
 	color: white ;
 	background-color: black ;
@@ -166,11 +183,6 @@ button.button-primary:hover,
 	background-color: black ;
 	animation: none;
 }
-.hints-container:active .hints-button::after{
-	left: 0;
-	content: "";
-}
-@media (min-width: 1000px) { .hints-container:active .hints-button::after{ content: " «"; } }
 
 .hints-button {
 	cursor: pointer;
@@ -188,15 +200,4 @@ button.button-primary:hover,
 @keyframes woosh{
   from{background-position:200%;}
   to  {background-position:0%;}
-}
-.hints-button::after {
-	content: " »";
-	position: relative;
-	transition: left 1s;
-	left: 0;
-}
-.hints-button span {
-	position: absolute;
-	right: 10px;
-	background: none;
 }
