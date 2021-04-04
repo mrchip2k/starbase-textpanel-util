@@ -6,18 +6,22 @@
 	--header-line-height: 50px;
 	--character-cell-size: 50px;
 }
+button,
 .button {
 	color: var(--main-color);
 }
+button.button-primary, 
 .button.button-primary {
 	color: var(--main-background);
 	border-color: var(--accent-color);
 	background-color: var(--accent-color);
 }
+button:hover,
 .button:hover {
 	color: #aaa;
 	border-color: #aaa;
 }
+button.button-primary:hover,
 .button.button-primary:hover {
 	color: black;
 	border-color: #ece071;
@@ -112,4 +116,88 @@
 	
 	/*This style determines how the element looks at the end of the "hiding" transition.*/
 	bottom: 5em;
+}
+
+
+/* Hints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hints-container *{
+	transition: background-color 0.2s, color 0.2s;
+}
+.hints-container p{
+	transition: background-color 0.2s, color 0.2s, background-position 0.3s;
+	padding: 20px;
+	margin-bottom: 0;
+	border-radius: 10px 10px 0 0;
+	font-weight: bold;
+	min-height: 3.3em;
+
+	background-attachment: local;
+	background-clip: padding-box;
+	background-color: #222;
+	background-image: url("../Components/CharacterList/hint-example.png");
+	background-position: center right 6%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/*Duplicate selector, split for correct priorities*/
+.hints-container:active .hints-button::after{ content: ""; }
+.hints-button::after {
+	content: " »";
+	position: relative;
+	transition: left 1s;
+	left: 0;
+}
+.hints-button span {
+	position: absolute;
+	right: 10px;
+	background: none;
+}
+
+@media (min-width: 1000px) { 
+	/* Enable Hover on PC */
+	.hints-container:hover p{ 
+		background-position: center right 9%;
+		background-color: #272727;
+	}
+	.hints-container:hover .hints-button{ 
+		animation: woosh 1s linear 0s infinite forwards; 
+	}
+	.hints-container:hover .hints-button::after {
+		left: 100px;
+	}
+	/* When leaving hover, reverse the arrow */
+	.hints-container:active .hints-button::after{ content: " «"; }
+}
+/*Duplicate selector, split for correct priorities*/
+.hints-container:active .hints-button::after{ left: 0; }
+.hints-container:active p{
+	color: white ;
+	background-color: black ;
+	background-position: center right -100%; 
+}
+.hints-container:active .hints-button{ 
+	color: white ;
+	background: none; /*or else the gradient overrides the black color*/
+	background-color: black ;
+	animation: none;
+}
+
+.hints-button {
+	cursor: pointer;
+	color: var(--main-background);
+	background-color: var(--accent-color);
+	border-radius: 0 0 10px 10px;
+	padding: 0 10px;
+	position: relative;
+	right: 0;
+	
+	background: linear-gradient(90deg, var(--accent-color) 50%, white,var(--accent-color) 100%); 
+	background-size:200% ;
+	background-position: 0%;
+}
+@keyframes woosh{
+  from{background-position:200%;}
+  to  {background-position:0%;}
 }
