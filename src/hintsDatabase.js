@@ -1,9 +1,10 @@
 let hintsDatabase =
 [
-"Find and copy special characters for Starbase Text Panels!",
-"The font you're seeing here is the same used by the game!",
-"Keep in mind a lot of characters look thin and are not as readable on a tiny text panel placed far away from the player's point of view.",
-"Some of these characters aren't monospace.",
+"yolol.lol: Find and copy-paste special characters for Starbase Text Panels!",
+"This website uses the same font as the game: characters will look the same.",
+"Keep that in game, text will be tiny. Some characters in this list are particularly thin and hard to read in most situations.",
+"Some characters are not monospace.",
+"Please report any issues or missing characters! Visit the About page for more information.",
 ];
 
 export default hintsDatabase;

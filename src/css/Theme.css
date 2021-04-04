@@ -71,7 +71,7 @@ button.button-primary:hover,
 .character-cell:focus {
 	color:var(--main-color);
 	margin: 2px;
-	border: 1px solid var(--accent-color);
+	border: 1px solid #fff3;
 	border-radius: 6px;
 	font-size: 3rem;
 	transition: border-width 0.1s, background-color 0.1s, color 0.1s;
@@ -80,6 +80,7 @@ button.button-primary:hover,
 	/*This selector overrides the look coming from buttons.*/
 	border-color: var(--accent-color);
 	border-width: 3px;
+	border-style: hidden solid;
 	color: var(--main-color);
 	background-color: #000c;
 }
