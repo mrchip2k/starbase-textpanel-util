@@ -13,7 +13,7 @@ function BottomDynamicHeader(props) {
 			{/*The header itself.*/}
 			<div className="bottom-header-container">
 				<Container addClass="header bottom border">
-					<img src="/assets/leftclick64.png" alt="LMB"/>
+					<img src="/assets/lmb.svg" alt="LMB"/>
 					<div><span>Leftclick to copy a character.</span></div>
 				</Container>
 			</div>
