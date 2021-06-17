@@ -28,6 +28,20 @@ button.button-primary:hover,
 	background-color: #ece071;
 }
 
+
+/* 【 Ａｅｓｔｅｔｈｉｃ 】
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.acrylic {
+	backdrop-filter: blur(5px);
+	background-color: #14141488;
+}
+@-moz-document url-prefix(){
+	.acrylic { /* Disable acrylic in Firefox*/
+		background-color: var(--main-background);
+	}
+}
+
+
 /* Generic helpers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .border.top {
@@ -44,7 +58,6 @@ button.button-primary:hover,
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header {
 	font-weight: bold;
-	background-color: #222;
 }
 .header a,
 .header button {
@@ -63,6 +76,67 @@ button.button-primary:hover,
 	height: calc(  var(--header-line-height)  *  0.7  );
 	padding: calc(  var(--header-line-height)  *  0.3 / 2  );
 }
+
+
+/* Bottom Header Buttons, wow this is overcomplicated
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header.bottom button{
+	height: 40px;
+	border-radius: 3px;
+	transition: background-position ease 0.3s;
+	
+	color: white;
+	background: #222; /* fallback if gradients dont work */
+	border: 2px solid #040404;
+	margin: 0;
+  }
+  
+  .header.bottom button.left{
+	background: linear-gradient(138deg, rgba(241,229,133,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 7%, rgba(224,203,11,1) 13%, rgba(224,203,11,1) 33%, rgba(116,106,14,1) 37%, var(--main-background) 60%); 
+	text-align: left;
+	  background-size:400%;
+	background-position:100%;
+  }
+  .header.bottom button.right{
+	background: linear-gradient(222deg, rgba(241,229,133,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 7%, rgba(224,203,11,1) 13%, rgba(224,203,11,1) 33%, rgba(116,106,14,1) 37%, var(--main-background) 60%); 
+	text-align: right;
+	  background-size:400%;
+	background-position:0%;
+  }
+  
+  
+  .header.bottom button:hover{
+	background-position:0%;
+	color: black;
+  }
+  .header.bottom button.right:hover{
+	background-position:100%;
+  }
+  
+  .header.bottom button::before,
+  .header.bottom button::after{
+	color: black !important;
+	opacity: 0;
+	transition: opacity ease 0.3s;
+  }
+  
+  .header.bottom button.open::before,
+  .header.bottom button.open::after  {
+	content: "▲";
+  }
+  .header.bottom button.close::before,
+  .header.bottom button.close::after{
+	content: "▼";
+  }
+  
+  .header.bottom button.left:hover::before,
+  .header.bottom button.right:hover::after{
+	opacity: 1;
+  }
+  .header.bottom button:active{
+	  background: black;
+	  color: white;
+  }
 
 
 /* Character list

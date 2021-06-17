@@ -4,7 +4,7 @@ import Container from '../Misc/Container';
 
 function MainHeader(props) {
 	return (
-		<Container addClass="header top sticky border">
+		<Container addClass="header top border acrylic">
 			<Link to="/">
 				<img
 				src="/textpanel_logo128.png" 
@@ -13,15 +13,11 @@ function MainHeader(props) {
 			</Link>
 
 			<Link to="/" className="grow"> 
-			<span>List</span> 
+				<span>List</span> 
 			</Link>
 
-			<Link to="/preview" className="grow"> 
-			<span>Editor</span> 
-			</Link>
-
-			<Link to="/about" className="grow-half"> 
-			<span>About</span> 
+			<Link to="/about" className="grow"> 
+				<span>About</span> 
 			</Link>
 		</Container>
 	);

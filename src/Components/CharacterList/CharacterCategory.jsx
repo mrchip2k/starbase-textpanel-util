@@ -14,7 +14,7 @@ function CharacterCategory(props) {
 
 	return (
 		<div className="noselect">
-			<p className="category-name">{props.category.name}</p>
+			<p className="category-name telegrama">{props.category.name}</p>
 			<div className="telegrama">{lines}</div>
 		</div>
 	);

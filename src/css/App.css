@@ -16,6 +16,17 @@ code {
 }
 
 
+/* Telegrama font
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+	font-family: "Telegrama";
+	src: url("../fonts/telegrama_render.woff") format("woff");
+}
+.telegrama {
+	font-family: "Telegrama";
+}
+
+
 /* Generic helpers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .grow { flex-grow: 1; }
@@ -32,36 +43,32 @@ code {
 }
 
 
-/* Telegrama font
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@font-face {
-	font-family: "Telegrama";
-	src: url("../fonts/telegrama_render.woff") format("woff");
-}
-.telegrama {
-	font-family: "Telegrama";
-}
-
-
 /* Headers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header {
 	z-index: 10;
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 .header img { height: var(--header-line-height) }
-.sticky.top {
+.top {
 	position: sticky;
 	top: 0;
+	margin-bottom: 20px;
 }
-.sticky.bottom {
-	position: sticky;
+.bottom {
+	position: fixed;
 	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	align-items: center;
+	justify-content: space-between;
+}
+.bottom::after{
+	content: none;
 }
 .header a,
-.header button,
 .header div {
 	text-align: center;
 	/*Vertical text center*/
@@ -74,13 +81,17 @@ code {
 	vertical-align: middle;
 	line-height: normal;
 }
-.bottom-header-container {
-	position:fixed;
-	bottom: 0;
-	width:100%;
-}
 .header-spacer {
 	height: var(--header-line-height)
+}
+#bottom-header-controls {
+	display: flex;
+	color: #fff8
+}
+@media screen and (max-width: 800px) {
+	#bottom-header-controls {
+		display: none;
+	}
 }
 
 

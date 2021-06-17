@@ -11,12 +11,17 @@ function BottomDynamicHeader(props) {
 			<div className="header-spacer"></div>
 			
 			{/*The header itself.*/}
-			<div className="bottom-header-container">
-				<Container addClass="header bottom border">
-					<img src="/assets/lmb.svg" alt="LMB"/>
-					<div><span>Leftclick to copy a character.</span></div>
-				</Container>
-			</div>
+			<Container addClass="header bottom border acrylic ">
+				<button className="left open"> Open Editor </button>
+
+				<div id="bottom-header-controls">
+					<div><span>Copy character</span></div>
+					<img src="/assets/mouse_bothbuttons.svg" alt="LMB"/>
+					<div><span>Add to Editor</span></div>
+				</div>
+
+				<button className="right open"> Open Preview </button>
+			</Container>
 
 		</div>
 	);
