@@ -66,7 +66,8 @@ class CharacterList extends React.Component {
 
 	triggerCopy(character) {
 		this.setState ({
-			character : character
+			character : character               // normal
+			// character : character.repeat(200) // lag testing
 		})
 		
 		setTimeout(() => {
